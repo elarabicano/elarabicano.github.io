@@ -1,0 +1,26 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const { pageTitle }  = Astro.props;
+
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> -->
+    <link rel="icon" type="image/x-icon" href="/elarabicano_favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+
+
+    <!-- fonts -->
+    <!-- <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/d-din"> -->
+
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
